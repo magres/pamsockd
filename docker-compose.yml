@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  asterisk:
+    build: .
+    restart: always
+    ports:
+        - 1901:1901
+    volumes:
+        - ./sockd.conf:/etc/sockd.conf
+        - ./sockd.pw:/opt/sockd.pw
